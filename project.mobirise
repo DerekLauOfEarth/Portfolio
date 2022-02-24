@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Derek Lau Yiok Teik's Portfolio",
-    "currentPage": "Our Project.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -61,7 +61,7 @@
     "gdpr": false
   },
   "pages": {
-    "index.html": {
+    "delete.html": {
       "settings": {
         "main": true,
         "title": "no",
@@ -628,7 +628,7 @@
         }
       ]
     },
-    "Our Project.html": {
+    "index.html": {
       "settings": {
         "title": "Home",
         "meta_descr": "Our Project",
