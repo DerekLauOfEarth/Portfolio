@@ -12,6 +12,7 @@
   
   <title>Home</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
@@ -38,7 +39,7 @@
                         <img src="assets/images/mbr-121x121.png" alt="Mobirise" style="height: 3.8rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Derek's Portfolio</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index.html">Derek Lau's Portfolio</a></span>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger">
@@ -95,26 +96,103 @@
     </div>
 </section>
 
-<section data-bs-version="5.1" class="video4 cid-sXsiTJRsrz" id="video4-25">
+<section data-bs-version="5.1" class="video4 cid-t6W1em1iAv" id="video4-27">
     
     
     <div class="container">
         <div class="title-wrapper mb-5">
-            <h4 class="mbr-section-title mbr-fonts-style mb-0 display-2"><strong>Random Spawning System (Unity Engine) </strong><br><strong>(2021- 2022)</strong></h4>
+            <h4 class="mbr-section-title mbr-fonts-style mb-0 display-2"><strong>Unity 3D Prototype Game (2022 WIP)</strong></h4>
         </div>
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 video-block">
-                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/QfxgAAWc5_o?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
+                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/RkP5IOuHGRw?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
                 <p class="mbr-description pt-2 mbr-fonts-style display-4"></p>
             </div>
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-4">A 3D random spawning system inspired by Frogger.<div><br></div><div>Project is structured with:</div><div><br></div><div>- ScriptableObject game architecture</div><div><br></div><div>- Object Pooling spawning optimisation</div><div><br></div></h5>
-                    <p class="mbr-text mbr-fonts-style display-7">Most of the project's GameObject settings are stored within multiple ScriptableObjects which ScriptableObject's modularity make it easier to compartmentalise each stage of the GameObject-data relationship.<br><br>Further more, by storing data within ScriptableObject, it offers opportunity for rapid configuration in which its value/ data can be easily slotted in/ out or having multiple copies of similar nature but different value ScriptableObjects. <br><br>As a result, I can have multiple&nbsp;copies of ScriptableObject containing different set of spawn rate configuration, and can easily swap the spawn rate setting during runtime in which any change of value can also persist beyond runtime.<br><br>With ObjectPooling, the spawning process has been optimised by reducing the overhead of constant instantiation of GameObject with a set of inactive pre-instantiated of GameObjects to be activated only when needed.</p>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-4"><strong>Highlight</strong></h5>
+                    <p class="mbr-text mbr-fonts-style display-7">A custom first-person RigidBody player controller with frame-by-frame custom physics calculation. <br><br>The controller is unique in that its main controller script is the only Unity component and, aside from a few helper scripts, the rest of the controller-related scripts are all ScriptableObject-based, such as its State Machine, Raycast probe, and Event system.<br><br>The main focus of the controller is to create a controller that is modular and scalable with the least amount of class coupling possible. <br><br>Utilising ScriptableObject for its modular plug-and-play nature and its ease of gameplay balance by allowing any changes made during runtime to persist beyond the play mode.<br><br>Developing a custom controller from the ground up provides the freedom of implementing custom complex State behaviour logic, a more robust understanding of how the system works internally, and providing the developer full control over the behaviour of physics such as gravity and friction.<br><br>Established a consistent naming convention for class, field, property, function, parameter, and local variable within the codebase.</p>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<section data-bs-version="5.1" class="content17 cid-t6W6PqIAGF" id="content17-29">
+
+    
+
+    
+    
+    <div class="container">
+        
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="section-head align-center mb-4">
+                        <h3 class="mbr-section-title mb-0 mbr-fonts-style display-5"><strong>Unity 3D Prototype Game Detailed Information</strong></h3>
+                        
+                    </div>
+                    
+                    <div id="bootstrap-toggle" class="toggle-panel accordionStyles tab-content">
+                        <div class="card mb-3">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_15" aria-expanded="false" aria-controls="collapse1">
+                                    <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Player controller's technical and design details</strong></h6>
+                                    <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse1_15" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">The State Machine currently consists of 10 different States :<br>- Idling<br>- Walking<br>- Running<br>- Jumping<br>- DoubleJumping<br>- Falling<br>- WallRunning<br>- WallJumping<br>- Surfing<br>- SurfJumping<br><br><br>The State behaviour logic and Raycast probe logic heavily utilised Unity Vector3 functions such as cross product, dot product, vector projection, and vector projection on plane to procedurally calculate the player’s orientation and direction without any prior hardcoded knowledge of the player’s surroundings.<br><br>Raycast is used to detect the player’s surroundings during runtime for information such as surface normal, surface transform, and Raycast hit point.<br><br>Each State is designed to be as modular as possible, via Interface Polymorphism and ScriptableObject, to ensure the least amount of logic coupling or at the very least to ensure that each referenced property or function has a single unified point of declaration that any change made there will instantly reflect across the whole codebase, instead of scouring through the codebase just to implement the very same change again and again at every single place that it is referenced.<br><br>All the individual movement states are inherited from a common IState interface that provides a unified structure of property and function implementations. Thus, the Raycast and player controller logic can interact with a generic IState type without any precise knowledge of which state they are interacting with nor how the aforementioned state’s behaviour logic works internally.<br><br>Since all of the states are ScriptableObject-based, their internal state selection logic and behaviour logic are completely encapsulated within that particular State class. Thus, by limiting its exposure to other classes and vice versa, it is easier to trace and pinpoint the bug within its isolated logic flow. <br><br>Based on the player behaviour, state selection logic is optimised via prioritisation and omission of other states’ entry conditions, thus skipping or reserving the most expensive condition operation for the very last possible moment.<br><strong>•</strong>&nbsp; In Walking State, the system prioritises Ground-based Movement States condition checks over Air-based Movement States as the player is more likely to continue moving on the ground than falling off the ground and into the air.<br><strong>•</strong>&nbsp; In WallRunning State, the system omits the DoubleJumping State condition check as it is logically impossible to double-jump while wall-running without wall-jumping first.<br><br>The custom gravity system logic is completely decoupled from individual States’ behaviour logic, thus, regardless of which state the player is in, the gravity will always rotate the player's orientation independently via DOTween and Quaternion calculation.<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_15" aria-expanded="false" aria-controls="collapse2">
+                                    <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>DoubleJumping State details</strong></h6>
+                                    <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                                </a>
+
+                            </div>
+                            <div id="collapse2_15" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">To preserve the “Fun” of high momentum-based movement, DoubleJumping needs to be able to preserve the player’s momentum in the air while still providing precise air movement control. The player needs to rapidly change their direction in the air without sacrificing too much of their initial momentum, but the player still needs to put a dead stop in their air movement to land precisely on top of a target. <br><br>Whenever the player does a 180° directional change in momentum, we need to drastically reduce their momentum to stop precisely in mid-air. However, the left to right and vice-versa DoubleJump unfortunately also fit the description of 180° directional change in DoubleJumping, thus we need to make another condition check to exclude the left to right DoubleJump from the drastic momentum loss.<br><br>However, granting the left to right and vice-versa DoubleJump to preserve momentum results in an unnatural jump in which the DoubleJump changes its direction too rapidly that it breaks the immersion of believable air movement. The root cause was the lack of inertia during momentum preservation. And thus, a new requirement is added for momentum preservation in which it requires a small momentum loss and directional angle loss to represent the inertia of momentum directional change which I will classify such DoubleJump behaviour as low momentum loss.<br><br>Now, for the high momentum loss DoubleJump that puts a dead stop in mid-air, the basic gist of how it works is the closer the non-left-to-right momentum directional change gets to 180°, the higher the momentum loss will be, with a maximum of 100% momentum loss linearly or non-linearly.<br><br>Thus, DoubleJumping State behaviour logic is branched into 2 types of momentum loss : <br><strong>•</strong>&nbsp; Low momentum loss with a small momentum loss and directional angle loss.<br><strong>•</strong>  High momentum loss that scales linearly or non-linearly.<br><br>Surprisingly, DoubleJumping State has more lines of code than Surfing State which is an omnidirectional movement, which honestly is quite a big surprise to my initial expectation.<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_15" aria-expanded="false" aria-controls="collapse3">
+                                    <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Surfing State details</strong></h6>
+                                    <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse3_15" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">Surfing State recreates and modifies Source Engine Strafe movement which instead of being relative to the player's GameObject forward direction, is relative to the player's RigidBody velocity forward direction. By separating the strafe control from the player and camera orientation and combining it with the RigidBody velocity direction, this creates a more beginner-friendly Surfing control as the player can freely look around without worrying that the camera orientation will impact their Surfing momentum.<br><br>Strafing in mid-air will also impact how much air movement control the player will get, the air movement control will scale linearly from a lower bound baseline value to an upper bound maximum value. Thus, allowing the player to make a sharper turn at a higher momentum.<br><br>Despite being physically unrealistic, it is more interesting to give the player better air control while the player is moving with a high momentum to negate the greater inertia that comes along with it. As it makes a thrilling moment when the player barely makes the turn to land on a sharply-angled Surf Ramp rather than just having the Player helplessly hurled far away from the Surf Ramp course by the inertia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_15" aria-expanded="false" aria-controls="collapse4">
+                                    <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Background visual Details</strong></h6>
+                                    <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                                </a>
+                            </div>
+                            <div id="collapse4_15" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <p class="mbr-fonts-style panel-text display-7">Aside from the Unity primitive meshes, all prototype models were personally designed, modelled, and animated by myself via Blender.<br><br>The sea of clouds background shader was created via Unity Shader Graph, while the cloud particle VFX was created via Unity VFX Graph.<br><br>Whenever a moving GameObject touches the sea of clouds on the ground, a cloud particle VFX will be dynamically spawned at the trigger collider's closest point on its bounding box via ScriptableObject-based Object Pooler to reduce runtime VFX GameObject instantiation overhead.<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 
 <section data-bs-version="5.1" class="image2 cid-sMGyWO6dMY" id="image2-15">
@@ -127,7 +205,7 @@
             <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
                     <img src="assets/images/screen-shot-2022-02-15-at-7.07.45-am-287x561.png" alt="Mobirise">
-                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4">
+                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-7">
                         Sticker AR Effect in display</p>
                 </div>
             </div>
@@ -168,37 +246,14 @@
             <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
                     <img src="assets/images/screen-shot-2022-02-15-at-6.32.34-am-447x902.png" alt="Mobirise">
-                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">
                         GIF Library</p>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
                     <img src="assets/images/screen-shot-2022-02-15-at-7.17.19-am-908x858.png" alt="Mobirise">
-                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">Multiple Explosion VFX AR Effects in display</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="video4 cid-sXs6NouHgF" id="video4-1t">
-    
-    
-    <div class="container">
-        <div class="title-wrapper mb-5">
-            <h4 class="mbr-section-title mbr-fonts-style mb-0 display-2">
-                <strong>Personal Unity Engine Project (WIP)</strong></h4>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6 video-block">
-                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/REPgZxvhKGk?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
-                <p class="mbr-description pt-2 mbr-fonts-style display-4"></p>
-            </div>
-            <div class="col-12 col-lg">
-                <div class="text-wrapper">
-                    <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-4">The project is inspired by CS:GO/ TF2 surf map.<br><br>I have modified and built upon a Unity Store controller asset, and have since added a few new features such as speed boost pad and dev cheat boost button for ease of testing.<br><br>The<strong> </strong>map&nbsp;is constructed with various Unity model assets from Synty Studios.</h5>
-                    <p class="mbr-text mbr-fonts-style display-7"></p>
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-7">Multiple Explosion VFX AR Effects in display</p>
                 </div>
             </div>
         </div>
@@ -217,8 +272,8 @@
         </div>
         <div class="row mbr-gallery mt-4">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image active">
-                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#sYkw8oDmQQ-modal" data-bs-target="#sYkw8oDmQQ-modal">
-                    <img class="w-100" src="assets/images/bone-1-596x808.jpeg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t6WkE1Zn1E-modal" data-bs-target="#t6WkE1Zn1E-modal">
+                    <img class="w-100" src="assets/images/bone-1-596x808.jpeg" alt="" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -227,8 +282,8 @@
                     Concept drawn on paper</h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#sYkw8oDmQQ-modal" data-bs-target="#sYkw8oDmQQ-modal">
-                    <img class="w-100" src="assets/images/bone-n-scythe-596x407.png" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t6WkE1Zn1E-modal" data-bs-target="#t6WkE1Zn1E-modal">
+                    <img class="w-100" src="assets/images/bone-n-scythe-596x407.png" alt="" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -237,8 +292,8 @@
                     Further refinement and measurement in Aseprite</h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#sYkw8oDmQQ-modal" data-bs-target="#sYkw8oDmQQ-modal">
-                    <img class="w-100" src="assets/images/bone-front-596x329.png" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t6WkE1Zn1E-modal" data-bs-target="#t6WkE1Zn1E-modal">
+                    <img class="w-100" src="assets/images/bone-front-596x329.png" alt="" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -246,16 +301,16 @@
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">Model construction in MagicaVoxel</h6>
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#sYkw8oDmQQ-modal" data-bs-target="#sYkw8oDmQQ-modal">
-                    <img class="w-100" src="assets/images/drowning-depth-461x763.png" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t6WkE1Zn1E-modal" data-bs-target="#t6WkE1Zn1E-modal">
+                    <img class="w-100" src="assets/images/drowning-depth-461x763.png" alt="" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">Drowning Depth final Model</h6>
             </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#sYkw8oDmQQ-modal" data-bs-target="#sYkw8oDmQQ-modal">
-                    <img class="w-100" src="assets/images/scythe-438x676.png" alt="" data-slide-to="4" data-bs-slide-to="4" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t6WkE1Zn1E-modal" data-bs-target="#t6WkE1Zn1E-modal">
+                    <img class="w-100" src="assets/images/scythe-438x676.png" alt="" data-slide-to="4" data-bs-slide-to="4" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -264,11 +319,11 @@
             </div>
         </div>
 
-        <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="sYkw8oDmQQ-modal">
+        <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="t6WkE1Zn1E-modal">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <div class="carousel slide" id="lb-sYkw8oDmQQ" data-interval="5000" data-bs-interval="5000">
+                        <div class="carousel slide" id="lb-t6WkE1Zn1E" data-interval="5000" data-bs-interval="5000">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img class="d-block w-100" src="assets/images/bone-1-596x808.jpeg" alt="">
@@ -286,18 +341,18 @@
                                 </div>
                             </div>
                             <ol class="carousel-indicators">
-                                <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ"></li>
-                                <li data-slide-to="1" data-bs-slide-to="1" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ"></li>
-                                <li data-slide-to="2" data-bs-slide-to="2" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ"></li>
-                                <li data-slide-to="3" data-bs-slide-to="3" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ"></li><li data-slide-to="4" data-bs-slide-to="4" data-target="#lb-sYkw8oDmQQ" data-bs-target="#lb-sYkw8oDmQQ"></li>
+                                <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E"></li>
+                                <li data-slide-to="1" data-bs-slide-to="1" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E"></li>
+                                <li data-slide-to="2" data-bs-slide-to="2" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E"></li>
+                                <li data-slide-to="3" data-bs-slide-to="3" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E"></li><li data-slide-to="4" data-bs-slide-to="4" data-target="#lb-t6WkE1Zn1E" data-bs-target="#lb-t6WkE1Zn1E"></li>
                             </ol>
                             <a role="button" href="" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
                             </a>
-                            <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" data-bs-slide="prev" href="#lb-sYkw8oDmQQ">
+                            <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" data-bs-slide="prev" href="#lb-t6WkE1Zn1E">
                                 <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
                                 <span class="sr-only visually-hidden">Previous</span>
                             </a>
-                            <a class="carousel-control-next carousel-control" role="button" data-slide="next" data-bs-slide="next" href="#lb-sYkw8oDmQQ">
+                            <a class="carousel-control-next carousel-control" role="button" data-slide="next" data-bs-slide="next" href="#lb-t6WkE1Zn1E">
                                 <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
                                 <span class="sr-only visually-hidden">Next</span>
                             </a>
@@ -345,7 +400,7 @@
             </div>
         </div>
     </div>
-</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/e" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Mobirise free maker - <a href="https://mobirise.site/n" style="color:#aaa;">Try here</a></p></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/y" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/i" style="color:#aaa;">Designed with Mobirise</a> website maker</p></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
 </body>
